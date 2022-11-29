@@ -1,0 +1,75 @@
+/* Contact */
+.contact {
+  @extend .list;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+  @include media($tablet) {
+    margin-left: auto;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  @include media($desktop) {
+    flex-direction: row;
+  }
+
+  &__item + &__item {
+    @include media($tablet) {
+      margin-top: 10px;
+    }
+    @include media($desktop) {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    @include media($tablet) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.334;
+      letter-spacing: 0.02em;
+      color: var(--primary-text-color);
+      transition: color 250ms var(--timing-function);
+      display: flex;
+      align-items: center;  
+    }
+    @include media($desktop) {
+    }
+
+    &--accent {
+      display: inline-block;
+      color: var(--accent-color);
+      font-size: 34px;
+      line-height: 1.16;
+      margin-bottom: 32px;
+      @include media($tablet) {
+        display: flex;
+        font-size: 12px;
+        color: var(--primary-text-color);
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    display: none;
+    margin-right: 10px;
+    fill: currentColor;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+}

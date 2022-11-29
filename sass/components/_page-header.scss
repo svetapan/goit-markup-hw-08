@@ -1,0 +1,58 @@
+.page-header {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #ececec;
+  color: #000000;
+
+  &__container {
+     @extend .container;
+     display: flex;
+     align-items: center;
+  }
+}
+
+.js-menu-container{
+  &.is-open {
+    overflow: hidden;
+  }
+}
+
+.button-menu {
+  z-index: 10;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+  @include media($tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+
+  &__icon{
+    &--closed {
+     display: none;
+    }
+  }
+
+  .is-open & {
+    .button-menu {
+      &__icon {
+          &--opened {
+            display: none;
+          }
+      
+          &--closed {
+            display: block;
+          }
+      }
+    }
+  }
+}

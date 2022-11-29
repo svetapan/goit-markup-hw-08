@@ -1,0 +1,51 @@
+.info {
+  @extend .list;
+  margin-top: -30px;
+
+  @include media($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+
+  &__item {
+    margin-top: 30px;
+    @include media($tablet) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+    }
+
+    @include media($desktop) {
+      flex-basis: calc(100% / 4 - 30px);
+      margin-left: 30px;
+    }
+  }
+    
+  &__title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+    
+  &__img {
+    background: var(--secondary-bg-color);
+    border-radius: 4px;
+    margin: 0 0 30px;
+    text-align: center;
+    line-height: 120px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+  }
+    
+  &__text {
+    margin: 0;
+  }
+}

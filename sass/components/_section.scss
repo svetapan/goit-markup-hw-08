@@ -1,0 +1,39 @@
+.section {
+  padding: 60px 0;
+  @include media($desktop) {
+    padding: 94px 0;
+  }
+  
+  &__container{
+    @extend .container;
+  }
+
+  &--top {
+    padding-top: 0;
+  }
+  
+  &--secondary {
+    background: #f5f4fa;
+  }
+
+  &--desktop {
+    display: none;
+    @include media($desktop) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    color: var(--title-text-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+
+    &--hidden {
+      display: none;
+    }
+
+  }
+}

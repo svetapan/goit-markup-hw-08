@@ -1,0 +1,41 @@
+.social {
+    @extend .list;
+    display: flex;
+    margin: -10px -5px 0;
+    text-align: center;
+    justify-content: center;
+
+    &--left {
+      @include media($desktop) {
+        justify-content: flex-start;
+      }
+    }
+  
+    &__link {
+      fill: var(--icon-color);
+      display: block;
+      width: 44px;
+      height: 44px;
+      line-height: 42px;
+      border-radius: 50%;
+      margin: 10px 5px 0;
+      transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+      
+      &--white {
+        fill: var(--secondary-color);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      &:hover,
+      &:focus {
+        fill: var(--secondary-color);
+        background-color: var(--accent-color);
+      }
+    }
+    
+    &__img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+  }

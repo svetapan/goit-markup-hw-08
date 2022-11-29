@@ -1,0 +1,13 @@
+/* Logo */
+.logo {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &__accent {
+    color: var(--accent-color);
+  }
+}
