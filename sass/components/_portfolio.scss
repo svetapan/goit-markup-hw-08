@@ -65,16 +65,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 63px 24px;
     color: #fff;
     font-size: 18px;
     line-height: 1.56;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
     transform: translateY(101%);
+    overflow: auto;
     transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
   }
 
   &__text {
-    margin: 0;
+    margin: auto 0;
   }
 
   &__content {
